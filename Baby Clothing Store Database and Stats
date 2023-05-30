@@ -1,0 +1,47 @@
+/** Baby_store list;
+Blanket
+Socks
+Hand Mittens
+Caps
+Pacifier
+Onesies
+Bibs
+Dress
+Tights
+Pants
+Skirts
+Sweater
+Headbands
+Shoulder Bibs
+Shirts
+**/
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, size TEXT, quantity INTEGER, price INTEGER);
+
+List the items in the store table
+INSERT INTO store VALUES (1,"Blanket","none",10, 17);
+INSERT INTO store VALUES (2,"Socks","none" ,5,5);
+INSERT INTO store VALUES (3,"Hand mittens","none",8,4);
+INSERT INTO store VALUES (4,"Caps","none",3,6);
+INSERT INTO store VALUES (5,"Pacifier","none",11,9);
+INSERT INTO store VALUES (6,"Onesies","small",7,8);
+INSERT INTO store VALUES (7,"Bibs","small",3,6);
+INSERT INTO store VALUES (8,"Dress","small",7,12); 
+INSERT INTO store VALUES (9,"Tights","small",8,14); 
+INSERT INTO store VALUES (10,"Pants","small",1,9);
+INSERT INTO store VALUES (11,"Skirts","small",2,10);
+INSERT INTO store VALUES (12,"Sweater","small",10,14);
+INSERT INTO store VALUES (13,"Headbands","small",6,3);
+INSERT INTO store VALUES (14,"Shoulder Bibs","none",18,15);
+INSERT INTO store VALUES (15,"Shirts","small",6,4);
+
+Store clothing table
+SELECT * FROM store;
+
+Total of sum of store table
+SELECT SUM (price) FROM store;
+
+List of clothing quantity less than 6
+SELECT*FROM store WHERE quantity < 6 ORDER BY quantity;
+
+List of clothing price is less than 7 dollars
+SELECT*FROM store WHERE price >7 ORDER BY price;
